@@ -1,0 +1,5 @@
+- @doc.each do |doc|
+  %h1= link_to doc.title, doc
+  %p= doc.content
+%button=link_to "New Note", new_doc_path
+%button= link_to 'Logout', destroy_user_session_path, :method => :delete
