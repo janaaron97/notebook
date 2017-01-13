@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @doc = Doc.last
+    @doc = current_user.docs.last
   end
 end
