@@ -1,0 +1,16 @@
+<h1><%= @doc.title %></h1>
+<p><%= @doc.content %></p>
+
+	<div id = "comments">
+		<h2>
+			<%= pluralize(@doc.comments.count, "Comment") %>
+		</h2>
+		<%= render @doc.comments %>
+	</div>
+
+	<h3>Join The Discussion</h3>
+	<%= render 'comments/form' %>
+
+<button><%= link_to "Delete Note", doc_path(@doc), method: :delete, data: {confirm: "Are you sure?"} %>
+<button><%=link_to "Edit Note", edit_doc_path %></button>
+<button><%=link_to "All Notes", docs_path %></button>

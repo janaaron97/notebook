@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'comments/create'
+
+  get 'comment/create'
+
   get 'comments/index'
 
   get 'comments/show'
@@ -20,6 +24,7 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  resources :docs
-  resources :comments
+  resources :docs do 
+    resources :comments
+  end
 end
