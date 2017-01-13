@@ -1,0 +1,18 @@
+<div class = "jumbotron welcome">
+	<h1 class = "banner">
+		Notosaurus
+	</h1>
+	<p>The T-Rex of Text</p>
+	<button><%= link_to "Login", new_user_session_path %></button>
+</div>
+
+<div class ="jumbotron recent-notes">
+	<div class = "container">
+		<h2 style = "text-align: center;">Your Most Recent Noto</h2>
+		<hr />
+		<center>
+			<h3><%= link_to(@doc.title, @doc) %></h3>
+			<p><%= truncate(@doc.content, length: 20) %></p>
+		</center>
+	</div>
+</div>
