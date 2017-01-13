@@ -10,7 +10,7 @@
 	<% end %>
 </div>
 
-<% if user_signed_in? %>
+<% if user_signed_in? && current_user.docs.count != 0 %>
 <div class ="jumbotron recent-notes">
 	<div class = "container">
 		<h2 style = "text-align: center;">Your Most Recent Noto</h2>

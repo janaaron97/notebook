@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-  	if Doc.count != 0 && user_signed_in?
+  	if user_signed_in? && Doc.count != 0
     	@doc = current_user.docs.last
     end
   end
