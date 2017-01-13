@@ -4,7 +4,7 @@
 	</h1>
 	<p>The T-Rex of Text</p>
 	<% if user_signed_in? %>
-		<%= link_to 'Logout', destroy_user_session_path, :method => :delete, class: 'logout' %>
+		<button><%= link_to 'Logout', destroy_user_session_path, :method => :delete, class: 'logout' %></button>
 	<% else %>
 		<button><%= link_to "Login", new_user_session_path %></button>
 	<% end %>
