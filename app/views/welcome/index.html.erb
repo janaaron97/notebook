@@ -6,6 +6,7 @@
 	<button><%= link_to "Login", new_user_session_path %></button>
 </div>
 
+<% if user_signed_in? %>
 <div class ="jumbotron recent-notes">
 	<div class = "container">
 		<h2 style = "text-align: center;">Your Most Recent Noto</h2>
@@ -16,3 +17,4 @@
 		</center>
 	</div>
 </div>
+<% end %>
