@@ -27,4 +27,10 @@ Rails.application.routes.draw do
   resources :docs do 
     resources :comments
   end
+
+  namespace :api do
+    resources :docs do
+      resources :comments, only: [:create, :update, :destroy]
+    end
+  end
 end
